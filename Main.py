@@ -3,11 +3,7 @@ import yaml
 import spotipy.util as util
 from MusicGrab import MusicGrab
 
-personal_playlist_name = # The name of the users personal spotify playlist to overwrite and save the songs to
-ConfigPath = # Spotify Config Path Here (Read Spotipy Auth Docs to learn how to create a config file for your spotify app)
-
-
-stream = open(ConfigPath) # Opens the config Path
+stream = open(config.yaml) # Opens the config Path
 user_config = yaml.safe_load(stream) # Safe Loads using yaml
 
 user_id = user_config['username'] # username
@@ -149,7 +145,7 @@ def Playlist_Id(name):
 
 
 
-
+personal_playlist_name = user_config["personal_playlist_name"] # The name of the users personal spotify playlist to overwrite and save the songs to
 my_playlist_id = Playlist_Id(personal_playlist_name)  # Gets the playlist id from the name
 
 
