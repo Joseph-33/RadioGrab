@@ -3,7 +3,7 @@ import urllib.request
 import html2text
 import re
 
-def Radio6MusicGrab(url="https://onlineradiobox.com/uk/bbcradio6/playlist/1?cs=uk.bbcradio6"):
+def MusicGrab(url="https://onlineradiobox.com/uk/bbcradio6/playlist/1?cs=uk.bbcradio6"):
     
     """"A function used to grab all recently played songs from a particular radio station on the website onlineradiobox.
     Inputs:
@@ -50,4 +50,4 @@ def Radio6MusicGrab(url="https://onlineradiobox.com/uk/bbcradio6/playlist/1?cs=u
 
 
 if __name__ == "__main__": # Check that the file is being directly called
-    artists_songs = Radio6MusicGrab()
+    artists_songs = MusicGrab()
