@@ -3,7 +3,8 @@
 A simple python script that will obtain the most recently played songs on a particular radio station and create a spotify playlist out of the list.
 
 # Getting Started
-Edit the config.yaml file with a text editor and fill in the required values
+- Edit the config.yaml file with a text editor and fill in the required values
+- Run Main.py using python3
 
 # Prequisites
 - An internet connection
