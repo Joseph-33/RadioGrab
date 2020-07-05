@@ -1,4 +1,4 @@
-# Imports the nessicary libraries
+# Imports the necessary libraries
 import urllib.request
 import html2text
 import re
