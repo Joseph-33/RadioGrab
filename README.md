@@ -20,7 +20,7 @@ Edit the config.yaml file with a text editor and fill in the required values
 More help [here](https://developer.spotify.com/documentation/general/guides/authorization-guide/) and [here](https://spotipy.readthedocs.io/en/2.12.0/#authorization-code-flow)
 
 # Installing
-Use git clone to download repositry
+Use git clone to download repository
 `
 git clone
 `
