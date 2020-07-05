@@ -1,18 +1,22 @@
+# Imports the nessicary libraries
 import urllib.request
 import html2text
 import re
 
 def Radio6MusicGrab(url="https://onlineradiobox.com/uk/bbcradio6/playlist/1?cs=uk.bbcradio6"):
-    """"A function used to grab all the recent songs from online radiobox.
+    
+    """"A function used to grab all recently played songs from the website onlineradiobox.
     Inputs:
-        None
+        url - The url from onlineradiobox 
     
     Outputs:
-        Approximately 143 songs in a list with each element of the format [artist,song]"""
-    #url = "https://onlineradiobox.com/uk/jackfmsurrey/playlist/1?cs=uk.jackfmsurrey"
+        List - A list with each element comprising of [arist_name,song_name]
+        
+    """
+
 
     with urllib.request.urlopen(url) as link:
-        html = link.read().decode("utf8")
+        html = link.read().decode("utf8") # Downloads the html and decodes it
     
     text = html2text.html2text(html) # Makes it readable
 
@@ -29,13 +33,12 @@ def Radio6MusicGrab(url="https://onlineradiobox.com/uk/bbcradio6/playlist/1?cs=u
 
 
     #print(text)
-    text_split_by_line = re.split("\d{2}:\d{2}\s\|",text)[1:] # Skips the first line as it's not great
-    Simple_Counter = 0
-    Final_list = []
-    for line in text_split_by_line[1:]:
+    text_split = re.split("\d{2}:\d{2}\s\|",text)[1:] # Splits the text into a list every time a time format HH:MM is observed. Also skips first element 
+    Final_list = [] # Declare our Final list at the beginning
+    for line in text_split[1:]: # Start a for loop and loop around each element in our list
 
-        Simple_Counter += 1
-        artist, song = re.split(" - ",line)[:2] # Obtain the and the song from a split by the tilde, notice the space
+
+        artist, song = re.split(" - ",line)[:2] # Obtain the and the song from a split by the tilde, notice the spaces
 
         artist = artist.split(",")[0] # For artists only, only take everything before the first comma, to screen for featuring artists
         artist = artist.strip() # Strip leading and trailing whitespace
@@ -46,5 +49,5 @@ def Radio6MusicGrab(url="https://onlineradiobox.com/uk/bbcradio6/playlist/1?cs=u
 
 
 
-if __name__ == "__main__":
+if __name__ == "__main__": # Check that the file is being directly called
     artists_songs = Radio6MusicGrab()
