@@ -6,6 +6,7 @@ A simple python script that will obtain the most recently played songs on a part
 Edit the config.yaml file with a text editor and fill in the required values
 
 # Prequisites
+- An internet connection
 - Spotify Premium
 - Python 3.x
   - [Spotipy](https://pypi.org/project/spotipy/)
