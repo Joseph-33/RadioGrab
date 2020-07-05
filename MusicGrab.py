@@ -5,7 +5,7 @@ import re
 
 def Radio6MusicGrab(url="https://onlineradiobox.com/uk/bbcradio6/playlist/1?cs=uk.bbcradio6"):
     
-    """"A function used to grab all recently played songs from the website onlineradiobox.
+    """"A function used to grab all recently played songs from a particular radio station on the website onlineradiobox.
     Inputs:
         url - The url from onlineradiobox 
     
