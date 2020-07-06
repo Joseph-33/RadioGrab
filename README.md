@@ -17,6 +17,7 @@ A simple python script that will obtain the most recently played songs on a part
 # How to obtain a client and secret id
 1. [Create a new app in spotify dashboard](https://developer.spotify.com/dashboard/applications)
 2. Locate your apps client id and secret
+3. Set your redirect uri to http://127.0.0.1
 
 More help [here](https://developer.spotify.com/documentation/general/guides/authorization-guide/) and [here](https://spotipy.readthedocs.io/en/2.12.0/#authorization-code-flow)
 
