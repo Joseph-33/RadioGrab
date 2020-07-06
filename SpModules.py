@@ -114,18 +114,18 @@ def playlist_id(name,sp):
     Outputs:
         my_playlist_id - The id of the playlist"""
 
-    UsrPlists=sp.current_user_playlists()
-    PlistFound = False
+    user_playlists=sp.current_user_playlists()
+    playlist_found = False
 
-    for PlistIndex in range(len(UsrPlists['items'])):
+    for playlist_index in range(len(user_playlists['items'])):
 
-        if UsrPlists['items'][PlistIndex]['name'] == name: # Checks if the playlist corresponds to the name given
+        if user_playlists['items'][playlist_index]['name'] == name: # Checks if the playlist corresponds to the name given
             print("Playlist Found")
-            PlistFound = True
+            playlist_found = True
             break
 
-    if not PlistFound: # Raises error if playlist name is not found in current user playlists.
+    if not playlist_found: # Raises error if playlist name is not found in current user playlists.
         raise Exception("Playlist Not Found! Check playlist name is correct.")
 
-    my_playlist_id = UsrPlists['items'][PlistIndex]['id']
+    my_playlist_id = user_playlists['items'][playlist_index]['id']
     return my_playlist_id
