@@ -1,6 +1,6 @@
 username: "" 
 client_id: "" 
 client_secret: "" 
-redirect_uri: "http://127.0.0.1" 
+redirect_uri: "https://127.0.0.1" 
 personal_playlist_name: ""
 radio_url: "https://onlineradiobox.com/uk/bbcradio6/playlist/1?cs=uk.bbcradio6"
