@@ -2,7 +2,7 @@ import spotipy
 import yaml
 import spotipy.util as util
 from MusicGrab import music_grab
-from SpotipyModules import get_top_songs_for_artist, playlist_id, convert_to_uri, split_artist
+from SpModules import get_top_songs_for_artist, playlist_id, convert_to_uri, split_artist
 
 stream = open("config.yaml") # Opens the config Path
 user_config = yaml.safe_load(stream) # Safe Loads using yaml
@@ -16,7 +16,7 @@ sp = spotipy.Spotify(auth=token) # Create a Spotipy Instance
 
 
 
-my_playlist_id = playlist_id(personal_playlist_name)  # Gets the playlist id from the name
+my_playlist_id = playlist_id(personal_playlist_name,sp)  # Gets the playlist id from the name
 
 artist_songs = music_grab(url = user_config["radio_url"]) # Obtains the music songs from onlineradiobox
 artist_results = get_top_songs_for_artist(artist_songs,sp) # Obtain spotipy searches from the artist_song list

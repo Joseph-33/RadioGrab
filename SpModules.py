@@ -105,7 +105,8 @@ def get_top_songs_for_artist(art_song,sp):
     return artist_results
 
 
-def playlist_id(name):
+
+def playlist_id(name,sp):
     """ A function that will find the playlist id of the users personal playlist
     Inputs:
         name - The name in text of the users spotify playlist
