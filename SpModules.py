@@ -26,7 +26,7 @@ def split_artist(artist,song,sp):
         return result # Success
 
 
-    artist_mod = artist.split("/")[0] # Chooses all text before a baclslash
+    artist_mod = artist.split("/")[0] # Chooses all text before a backslash
     query = "artist:{} track:{}".format(artist_mod,song) # Generates a new query
     result = sp.search(q=query, type='track', limit=1)
 
