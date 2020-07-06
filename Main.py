@@ -114,7 +114,7 @@ def get_top_songs_for_artist(art_song):
     return artist_results
 
 
-def Playlist_Id(name):
+def playlist_id(name):
     """ A function that will find the playlist id of the users personal playlist
     Inputs:
         name - The name in text of the users spotify playlist
@@ -141,11 +141,11 @@ def Playlist_Id(name):
 
 
 personal_playlist_name = user_config["personal_playlist_name"] # The name of the users personal spotify playlist to overwrite and save the songs to
-my_playlist_id = Playlist_Id(personal_playlist_name)  # Gets the playlist id from the name
+my_playlist_id = playlist_id(personal_playlist_name)  # Gets the playlist id from the name
 
 
-Artist_Songs = MusicGrab(url = user_config["radio_url"]) # Obtains the music songs from onlineradiobox
-artist_results = get_top_songs_for_artist(Artist_Songs) # Obtain spotipy searches from the artist_song list
+artist_Songs = MusicGrab(url = user_config["radio_url"]) # Obtains the music songs from onlineradiobox
+artist_results = get_top_songs_for_artist(artist_Songs) # Obtain spotipy searches from the artist_song list
 tracklist = convert_to_uri(artist_results) # Obtain song uri's from the spotipy searches
 
 
