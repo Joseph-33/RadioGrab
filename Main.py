@@ -17,8 +17,8 @@ sp = spotipy.Spotify(auth=token) # Create a Spotipy Instance
 personal_playlist_name = user_config["personal_playlist_name"] # The name of the users personal spotify playlist to overwrite and save the songs to
 my_playlist_id = playlist_id(personal_playlist_name)  # Gets the playlist id from the name
 
-artist_Songs = music_grab(url = user_config["radio_url"]) # Obtains the music songs from onlineradiobox
-artist_results = get_top_songs_for_artist(artist_Songs,sp) # Obtain spotipy searches from the artist_song list
+artist_songs = music_grab(url = user_config["radio_url"]) # Obtains the music songs from onlineradiobox
+artist_results = get_top_songs_for_artist(artist_songs,sp) # Obtain spotipy searches from the artist_song list
 tracklist = convert_to_uri(artist_results) # Obtain song uri's from the spotipy searches
 
 
