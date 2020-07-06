@@ -6,7 +6,9 @@ from SpotipyModules import get_top_songs_for_artist, playlist_id, convert_to_uri
 
 stream = open("config.yaml") # Opens the config Path
 user_config = yaml.safe_load(stream) # Safe Loads using yaml
-user_id = user_config['username'] # username
+user_id = user_config['username'] # Spotify Username
+personal_playlist_name = user_config["personal_playlist_name"] # The name of the users personal spotify playlist to overwrite and save the songs to
+
 
 token = util.prompt_for_user_token(user_config['username'], scope='playlist-modify-private,playlist-read-private', client_id=user_config['client_id'], client_secret=user_config['client_secret'], redirect_uri=user_config['redirect_uri']) # Generates a token
 sp = spotipy.Spotify(auth=token) # Create a Spotipy Instance
@@ -14,7 +16,6 @@ sp = spotipy.Spotify(auth=token) # Create a Spotipy Instance
 
 
 
-personal_playlist_name = user_config["personal_playlist_name"] # The name of the users personal spotify playlist to overwrite and save the songs to
 my_playlist_id = playlist_id(personal_playlist_name)  # Gets the playlist id from the name
 
 artist_songs = music_grab(url = user_config["radio_url"]) # Obtains the music songs from onlineradiobox
