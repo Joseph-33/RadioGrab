@@ -3,7 +3,7 @@ import yaml
 import spotipy.util as util
 from MusicGrab import MusicGrab
 
-stream = open(config.yaml) # Opens the config Path
+stream = open("config.yaml") # Opens the config Path
 user_config = yaml.safe_load(stream) # Safe Loads using yaml
 user_id = user_config['username'] # username
 
