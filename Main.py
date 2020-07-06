@@ -5,7 +5,6 @@ from MusicGrab import MusicGrab
 
 stream = open(config.yaml) # Opens the config Path
 user_config = yaml.safe_load(stream) # Safe Loads using yaml
-
 user_id = user_config['username'] # username
 
 token = util.prompt_for_user_token(user_config['username'], scope='playlist-modify-private,playlist-read-private', client_id=user_config['client_id'], client_secret=user_config['client_secret'], redirect_uri=user_config['redirect_uri']) # Generates a token
@@ -25,12 +24,10 @@ def split_artist(artist,song,sp):
         """
 
     artist = artist.lower() # Make it lowercase
-
     artist_mod = artist.split("&")[0]     # Split the string based off the apersand and "and" to remove featuring artists
     artist_mod = artist_mod.split("and")[0]
 
     query = "artist:{} track:{}".format(artist_mod,song) # Creates a new query
-
     result = sp.search(q=query, type='track', limit=1) # Searching
 
     if result['tracks']['total']: # Do any files exist
@@ -91,7 +88,6 @@ def get_top_songs_for_artist(art_song):
 
 
         query = "artist:{} track:{}".format(art_song[i][0],art_song[i][1]) # Creates a query
-
         artist_results[i] = sp.search(q=query, type='track', limit=1) # Does the searching
 
         if artist_results[i]['tracks']['total']: # Checks to see if search was successful
@@ -127,7 +123,6 @@ def Playlist_Id(name):
         my_playlist_id - The id of the playlist"""
 
     UsrPlists=sp.current_user_playlists()
-    
     PlistFound = False
 
     for PlistIndex in range(len(UsrPlists['items'])):
