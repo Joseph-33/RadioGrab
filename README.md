@@ -1,6 +1,6 @@
 # RadioGrab
 
-A simple python script that will obtain the most recently played songs on a particular radio station and create a spotify playlist out of the list.
+A simple python script that will obtain the most recently played songs on an internet radio station and create a spotify playlist out of the list.
 
 # Getting Started
 - Edit the config.yaml file with a text editor and fill in the required values
