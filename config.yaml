@@ -1,6 +1,24 @@
-username: "" 
-client_id: "" 
-client_secret: "" 
-redirect_uri: "https://127.0.0.1" 
+username: ""
+client_id: ""
+client_secret: ""
+redirect_uri: "http://127.0.0.1" 
 personal_playlist_name: ""
-radio_url: "https://onlineradiobox.com/uk/bbcradio6/playlist/1?cs=uk.bbcradio6"
+radio_url: "https://onlineradiobox.com/uk/bbcradio6/playlist/1?cs=uk.bbcradio6&useStationLocation=1"
+start_time: "7:30"
+
+#INFO
+#
+# personal_playlist_name: This should be the name of your spotify playlist, the program can't read collaborative playlists but that can be changed
+# by modifying the scope in Main.py to include playlist-read-collaborative.
+# note the playlist contents WILL be wiped to replace it with new songs.
+#
+# radio_url: To get a new radiourl, go to onlineradiobox.com and find a playlist of a different radio station.
+# (Hint: The 1 before the ?cs= in the radio_url shows it was the previous day, this is useful so we have 24 hours of music)
+# (Include &useStationLocation=1 to use the radio station time zone (London for Radio 6))
+#
+# start_time: The first song to be on the playlist was played on the radio at the start_time
+# Use 24H format HH:MM or specify "now" and the first item on the playlist will be the one that played the same time, previous day.
+# Specify "random" in start_time to shuffle the list
+#
+# 
+ 
