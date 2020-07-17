@@ -58,7 +58,7 @@ def music_grab(url="https://onlineradiobox.com/uk/bbcradio6/playlist/1?cs=uk.bbc
     text = re.sub("\s{2,}"," ",text) # Replaces multiple whitespaces    
     
     text_split = re.split("\d{2}:\d{2}\s\|",text)[1:] # Splits the text into a list every time a time format HH:MM is observed.
-    text_split.reverse() # Reverse the list
+    text_split.reverse() # Reverse the list 
     
     
     if start_time.lower() == "random":
