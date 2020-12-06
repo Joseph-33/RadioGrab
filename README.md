@@ -44,10 +44,6 @@ python Main.py
 ```
 
 
-# Issues
-Any problems, create a new issue here
-
-
 
 # Authors
 - Joseph Andrews
