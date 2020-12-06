@@ -37,7 +37,7 @@ Create a spotify playlist (it can be public private or collaborative), place the
 
 Input your desired radio station and start time into the config.yaml
 
-run the script with
+Run the script with
 
 ```
 python Main.py
