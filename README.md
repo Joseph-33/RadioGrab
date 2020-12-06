@@ -4,10 +4,7 @@ Do you love listening to the radio?
 
 Are you sick of radio DJ's who won't stop talking?
 
-Look no further, this python script will make a playlist for you out of the last 24h of songs on the radio
-
-
-This will obtain the most recently played songs on an internet radio station and create a spotify playlist out of the list.
+Look no further, this python script will make a  spotifyplaylist out of the last 24h of songs played on the radio.
 
 # Getting Started
 - Edit the config.yaml file with a text editor and fill in the required values
