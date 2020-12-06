@@ -21,7 +21,7 @@ start_time: "7:30"
 # Specify "random" in start_time to shuffle the list
 #
 #
-# Example stations for you to slect, just paste the url of one of these into the radio_url entry
+# Example stations for you to select, just paste the url of one of these into the radio_url entry
 #
 # absolute radio "https://onlineradiobox.com/uk/absolute1058/playlist/1?cs=uk.smoothradio1022&UseStationLocation=1"
 # ab 80s "https://onlineradiobox.com/uk/absolute80s/playlist/1?cs=uk.smoothradio1022&UseStationLocation=1"
